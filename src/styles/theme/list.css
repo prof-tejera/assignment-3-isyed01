@@ -1,0 +1,106 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  border-top: solid var(--main-border-width) var(--main-border-color-light);
+}
+
+ul li:last-child {
+  border-bottom: solid var(--main-border-width) var(--main-border-color-light);
+}
+
+ul.no-border li {
+  border-color:var(--main-bg-color);
+}
+
+
+
+/* reordered list */
+
+ul.reorderable li.active {
+  background-color: var(--primary-color-darkest);
+}
+
+ul.reorderable li.over-top {
+  border-top: solid 3px var(--primary-color);
+}
+
+ul.reorderable li.over-bottom {
+  border-bottom: solid 3px var(--primary-color);
+}
+
+/* specific cards */
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.card-list-gap-8 {
+  padding: 8px 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.list-item-surface,
+.list-item-selected {
+  height:72px;
+  padding:12px 24px 12px 16px;
+  transition: background-color 0.35s;
+}
+
+.list-item-surface {
+  background: var(--md-sys-color-surface-1);
+}
+
+
+.list-item-surface:hover {
+  background: var(--md-sys-color-surface-2);
+}
+.list-item-surface:focus {
+  background: var(--md-sys-color-surface-3);
+}
+.list-item-surface:active {
+  background: var(--md-sys-color-surface-3);
+}
+.list-item-selected {
+  background: var(--md-sys-color-surface);
+}
+
+
+
+
+
+
+.icon.checked {
+  background-color: var(--md-sys-comp-checkbox-selected-color);
+  position:relative;
+  border-radius: 2px;
+  font-size:18px;
+  margin-right:3px;
+  margin-left:3px;
+  color:rgba(0,0,0,0);
+
+}
+
+.icon.checked::before {
+  content:'check_small';
+  position: absolute;
+  left:-3px;
+  top:-2px;
+  color: var(--md-sys-color-on-primary);
+  font-size:var( --md-sys-comp-checkbox-size);
+
+
+}
+.icon.unchecked {
+  color:var(--md-sys-comp-checkbox-unselected-color);
+}
+

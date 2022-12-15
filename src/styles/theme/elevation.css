@@ -1,0 +1,143 @@
+ /*
+    Specs: https://m3.material.io/styles/elevation/tokens
+*/
+
+:root {
+    --umbra-opacity: 20%;
+    --panumbra-opacity: 14%;
+    --antumbra-opacity: 12%;
+
+    --umbra-color: rgb(0, 0, 0, var(--umbra-opacity));
+    --panumbra-color: rgb(0, 0, 0, var(--panumbra-opacity));
+    --antumbra-color: rgb(0, 0, 0, var(--antumbra-opacity));
+
+    --umbra-0: 0px 0px 0px 0px var(--umbra-color);
+    --umbra-1: 0px 2px 1px -1px var(--umbra-color);
+    --umbra-3: 0px 3px 3px -2px var(--umbra-color);
+    --umbra-6: 0px 3px 5px -1px var(--umbra-color);
+    --umbra-8: 0px 5px 5px -3px var(--umbra-color);
+    --umbra-12: 0px 7px 8px -4px var(--umbra-color);
+
+    --panumbra-0: 0px 0px 0px 0px var(--panumbra-color);
+    --panumbra-1: 0px 1px 1px 0px var(--panumbra-color);
+    --panumbra-3: 0px 3px 4px 0px var(--panumbra-color);
+    --panumbra-6: 0px 6px 10px 0px var(--panumbra-color);
+    --panumbra-8: 0px 8px 10px 1px var(--panumbra-color);
+    --panumbra-12: 0px 12px 17px 2px var(--panumbra-color);
+
+    --antumbra-0: 0px 0px 0px 0px var(--antumbra-color);
+    --antumbra-1: 0px 1px 3px 0px var(--antumbra-color);
+    --antumbra-3: 0px 1px 8px 0px var(--antumbra-color);
+    --antumbra-6: 0px 1px 18px 0px var(--antumbra-color);
+    --antumbra-8: 0px 3px 14px 2px var(--antumbra-color);
+    --antumbra-12: 0px 5px 22px 4px var(--antumbra-color);
+
+    /* CSS property: box-shadows */
+    --elevation-0: var(--umbra-0), var(--panumbra-0), var(--antumbra-0);
+    --elevation-1: var(--umbra-1), var(--panumbra-1), var(--antumbra-1);
+    --elevation-2: var(--umbra-3), var(--panumbra-3), var(--antumbra-3);
+    --elevation-3: var(--umbra-6), var(--panumbra-6), var(--antumbra-6);
+    --elevation-4: var(--umbra-8), var(--panumbra-8), var(--antumbra-8);
+    --elevation-5: var(--umbra-12), var(--panumbra-12), var(--antumbra-12);
+}
+
+.md-elevation-0 {
+    box-shadow: var(--elevation-0);
+}
+
+.md-elevation-1 {
+    box-shadow: var(--elevation-1);
+}
+
+.md-elevation-2 {
+    box-shadow: var(--elevation-2);
+}
+
+.md-elevation-3 {
+    box-shadow: var(--elevation-3);
+}
+
+.md-elevation-4 {
+    box-shadow: var(--elevation-4);
+}
+
+.md-elevation-5 {
+    box-shadow: var(--elevation-5);
+}
+
+.md-elevation-0,
+.md-elevation-1,
+.md-elevation-2,
+.md-elevation-3,
+.md-elevation-4,
+.md-elevation-5 {
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*
+
+    transition: background-image 280ms cubic-bezier(0.4, 0, 0.2, 1);
+*/
+
+/*
+######################## ELEVATION 0 ########################
+Assist Chip (Flat)
+Carousel Item
+Filled Button
+Filled Tonal Button 
+Filled Card
+Filter Chip (Flat)
+Full Screen Dialog
+List Item
+Input Chip
+Navigation Rail
+Primary Navigation Tabs
+Secondary Navigation Tabs
+Outlined Card
+Side Sheet (Docked)
+Slider (Track)
+Suggestion Chip (Flat)
+>>> Top App Bar
+
+######################## ELEVATION 1 ########################
+Assist Chip (Elevated)
+Banner
+Bottom Sheet (Modal)
+Elevated Button
+Elevated Card
+Extended FAB (Lowered)
+FAB (Lowered)
+Filter Chip (Elevated)
+Navigation Drawer (Modal)
+Side Sheet (Modal)
+Slider (Handle)
+Suggestion Chip (Elevated)
+
+######################## ELEVATION 2 ########################
+Autocomplete Menu
+Bottom App Bar
+Dropdown Menu
+Menu
+Navigation Bar
+Select Menu
+Rich Tooltip
+>>> Top App Bar (Scrolled)
+
+######################## ELEVATION 3 ########################
+FAB
+Extended FAB
+Modal Date Picker
+Docked Date Picker
+Modal Date Input
+Dialog
+Search Bar
+Search View
+Time Picker
+Time Input
+
+######################## ELEVATION 4 ########################
+(not assigned as resting level)
+
+######################## ELEVATION 5 ########################
+(not assigned as resting level)
+
+*/

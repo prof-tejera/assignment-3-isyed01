@@ -1,0 +1,52 @@
+
+.time-display {
+    font-variant: slashed-zero tabular-nums;
+    font-weight: 400;
+} 
+.digits-ms {
+    font-size:65%;
+}
+.symbol-char {
+    font-size:80%;
+}
+.symbol-char::before {
+    content: "\00a0\00a0";
+    font-size: 10%;
+}
+.symbol-indent-right::after {
+    content: "\00a0\00a0\00a0\00a0";
+    font-size: 50%;
+}
+
+.symbol-char-on {
+    opacity: .8;
+}
+.symbol-char-off {
+    opacity: 0.33;
+}
+
+.digit-on {
+    opacity: 1;
+}
+.digit-off {
+    opacity: 0.33;
+}
+
+.symbol-on {
+    opacity:0.7;
+}
+.symbol-off {
+    opacity:0.33;
+}
+
+.symbol-colon::before,
+.symbol-colon::after {
+    content: "\00a0\00a0";
+    font-size: 50%;
+}
+.symbol-decimal::before,
+.symbol-decimal::after {
+    content: "\00a0\00a0";
+    font-size: 10%;
+}
+

@@ -1,0 +1,45 @@
+.session-headline {
+    align-self: end;
+    text-align: center;
+}
+
+.session-container {
+    display:flex; 
+    flex-direction: column;
+    height: 100%;
+}
+
+.session-radial-timer-wrapper {
+    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow:hidden;
+}
+
+.session-active-font {
+    color: var(--md-sys-comp-checkbox-selected-color);
+}
+
+.session-primary-time {
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
+
+.session-total-progress-container  {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.session-time-controls-container  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:8px;
+    width:100%;
+    padding-top:2vh;
+    padding-bottom:3vh;
+}

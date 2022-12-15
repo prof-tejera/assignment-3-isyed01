@@ -1,0 +1,56 @@
+/*
+.card {
+  display: flex;
+  flex-direction: row;
+  padding:0.75rem 1rem;
+  justify-content: space-between;
+  border-top: solid var(--main-border-width) var(--main-border-color-light);
+}
+*/
+
+/*
+Card specs: https://m3.material.io/components/cards/specs
+
+Layout attribute        Value
+------------------------------------------
+Shape                   12dp corner radius
+Left/right padding      16dp
+Padding between cards   8dp max
+Label text alignment    Start-aligned
+*/
+
+
+.card {
+    --transition-type: cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--md-sys-color-surface-1);
+    box-shadow: var(--md-sys-elevation-1);
+    border-radius: var(--md-sys-shape-corner-medium);
+    padding: 8px 16px;
+    transition: 
+        box-shadow 280ms var(--transition-type), 
+        ackground-color 280ms var(--transition-type), 
+        ackground-attachment 280ms var(--transition-type), 
+        padding-top 280ms var(--transition-type), 
+        padding-bottom 280ms var(--transition-type);
+}
+
+
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (min-width: 840px) {
+    .card {
+        padding: 24px;
+    }
+}
+
+
+
+/* specific card types */
+.card.draggable:hover {
+    background: var(--md-sys-color-surface-2);
+    box-shadow: var(--md-sys-elevation-2);
+}
+
+

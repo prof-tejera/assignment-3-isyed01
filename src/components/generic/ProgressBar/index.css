@@ -1,0 +1,49 @@
+
+
+.progress {
+    height: 0.5rem;
+    font-size: 0.125rem;
+    border-radius: 0.25rem;
+}
+
+
+/*
+    the two types of progress
+*/
+
+.progress.line {
+    height: 0.0675rem;
+    font-size: 0.0675rem;
+    border-radius: 0;
+}
+
+.progress.linear {
+    background-color: rgba(33,33,33);
+}
+
+.progress.segmented {
+    display: flex !important;
+    gap:0.125rem;
+}
+
+
+/*
+    types of divs, based on type
+*/
+
+.progress div {
+    font-size: 0.125rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.progress.line div {
+    height: 0.0675rem;
+    font-size: 0.0675rem;
+    border-radius: 0;
+}
+
+.progress.segmented div {
+    flex:1;
+    background-color: rgb(42, 42, 42);
+}
