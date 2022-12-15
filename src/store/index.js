@@ -1,12 +1,11 @@
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+//import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-//import { PRODUCTION } from '../globals';
 import activitiesReducer from './reducers/activitiesReducer';
 import routineReducer from './reducers/routineReducer';
 import sessionReducer from './reducers/sessionReducer';
 import historyReducer from './reducers/historyReducer';
 
-const PRODUCTION = false;
 const initialState = {}
 const middleware = [thunk];
 
@@ -19,9 +18,9 @@ const rootReducer = combineReducers({
 });
 
 // PRODUCTION
-//const store = createStore(rootReducer, initialState, applyMiddleware(...middleware));
+export const store = createStore(rootReducer, initialState, applyMiddleware(...middleware));
 
-
+/*
 export const store = PRODUCTION ? createStore(
     rootReducer,
     initialState,
@@ -38,3 +37,5 @@ createStore(
         (window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) || window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
     )
 );
+
+*/
