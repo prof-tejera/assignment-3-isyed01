@@ -1,0 +1,48 @@
+.progress-line {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    margin-top: 8px;
+    background: var(--md-sys-color-surface-3);
+}
+
+.progress-line .fill {
+    height: 3px;
+    border-radius: 2px;
+    background: var(--md-sys-color-on-primary-container);
+}
+
+
+.segmented-progress {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.segmented-progress .segment {
+    flex: 1; 
+    border-radius: 4px;
+    background-color: #292929;
+}
+
+.segmented-progress .segment .fill {
+    height:4px;
+    border-radius: 4px;
+    background-color: var(--md-sys-color-on-primary-container);
+}
+
+
+.indented-progress {
+    width: 100%;
+    height:3px;
+    border-radius:2px;
+    margin-top: 8px;
+    background-color:var(--md-sys-color-surface);
+}
+
+.indented-progress .fill {
+    border-radius:2px;
+    height: 3px;
+    background-color: var(--md-sys-color-on-primary-container);
+}

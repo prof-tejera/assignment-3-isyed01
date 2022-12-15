@@ -1,0 +1,23 @@
+.reorderable-item-drag-source {
+    opacity:0.1;
+    height:1px;
+}
+
+.reorderable-target-over-before, 
+.reorderable-target-over-after {
+    opacity:0.8;
+}
+
+.reorderable-target-over-before::before,
+.reorderable-target-over-after::after {
+    content:'';
+    display:block;
+    height:100px;
+    opacity:0.1;
+    background-color: var(--md-sys-color-on-primary-container);
+}
+
+
+
+
+

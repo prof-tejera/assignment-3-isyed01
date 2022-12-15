@@ -1,0 +1,99 @@
+/* specs: https://m3.material.io/components/dialogs/specs */
+
+.dialog-backdrop {
+    background: transparent;
+    position: absolute;
+    z-index: 1000;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100%;
+}
+.scrim {
+    background: rgba( var( --md-sys-color-scrim-rgb) / .32);
+}
+
+
+
+/* container */
+.dialog {
+    position: relative;
+    z-index:2000;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    height:100vh;
+    background: var(--md-sys-color-surface);
+}
+
+
+/* see: top-app-bar */
+.dialog-header {
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.dialog-body {
+    overflow: auto;
+    flex:1;
+    flex-grow: 1;
+    padding:8px 16px;
+}
+
+
+
+
+/* fullscreen dialog width limit is 560px in specs */
+@media only screen and (min-width: 600px) {
+    /* change here to desktop videw */
+    .dialog-backdrop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .dialog {
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0.75rem;
+        box-shadow: var(--md-sys-elevation-3);
+        background: var(--md-sys-color-surface-1);
+
+        width:100%;
+        max-width:480px;
+        max-height:80vh;
+        height:auto;
+        /*
+        padding:24px;
+        padding-top:16px;
+        */
+    }
+
+
+    .dialog-header {
+        margin:8px 8px 0 8px;
+        height:64px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        box-shadow: none;
+        background: none !important;
+        background-image: none;
+    }
+    .dialog-body {
+        padding:0 24px 0 24px;
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 840px) {
+
+}

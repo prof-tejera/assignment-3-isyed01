@@ -1,0 +1,295 @@
+input {
+  accent-color:rgb(8, 171, 204);
+}
+
+input[type=text], 
+input[type=number] {
+  font-size: 1rem;
+  background-color: rgba(51, 51, 51, 1);
+  color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  padding-top: 1.5rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: solid 0.125rem rgba(255, 255, 255, 0);
+  border-radius: 0.25rem;
+}
+
+
+input[type=text]:focus, 
+input[type=number]:focus {
+  outline:none;
+  border: solid 0.125rem rgb(8, 171, 204);
+}
+
+input[type=number] {
+  appearance: textfield;
+  text-align: center;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=range] {
+  box-sizing: border-box;
+  display:block;
+}
+
+/************************************/
+
+
+
+/*
+
+input[type=text], input[type=number] {
+  padding:0.5rem 1rem;
+}
+
+
+
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+
+*/
+/************************************/
+
+
+.form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+
+fieldset {
+  margin: none;
+  border: none;
+  padding: 0.25rem 0;
+}
+
+.field {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.field input {
+  width: 100%;
+}
+
+.field input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+
+/* Floating label */
+
+.field label.float,
+.field input:focus label.float {
+  box-sizing: border-box;
+  left: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  display: block;
+  position: absolute;
+  z-index: 5;
+  font-size: 0.625rem;
+  top: 0.5rem;
+  padding: 0;
+  margin: 0;
+  transition: all 0.25s ease;
+}
+
+.field input:focus::placeholder {
+  color: #999999;
+}
+
+.field input[value=""]+label.float {
+  color: #999999;
+  font-size: 1rem;
+  top: 1.25rem;
+}
+
+.field input[value=""]:focus+label.float {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.625rem;
+  top: 0.5rem;
+}
+
+
+
+
+
+.field .counter {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.625rem;
+  top: 0.5rem;  right: 1.1rem;
+}
+
+
+
+
+/* label: bottom centered */
+
+label.float-bottom {
+  box-sizing: border-box;
+  display:block;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.625rem;
+  margin-top:-0.45rem;
+  padding-bottom:0.25rem;
+}
+
+
+/*
+  
+  
+  fieldset label::after {
+    content: attr(title);
+  } 
+  
+  fieldset input[value=""] + label {
+    content: attr(placeholder);
+    display:block;
+    position:relative;
+    font-size:1rem;
+    top:-1.5rem;
+    left:0.5rem;
+    color:#000;
+  } 
+  
+  fieldset input[value=""] + label::after {
+    content: attr(placeholder);
+  } 
+  
+  */
+
+
+/*
+  .field input {
+    padding:0.75rem 0.5rem 0.25rem 0.5rem;
+  } 
+  
+  .field input:invalid + label {
+    color:red;
+  } 
+  .field input:valid + label {
+    color:green;
+  } 
+  
+  
+  .field input:valid + small {
+    color:green !important;
+  } 
+  
+  
+  .field input:valid ~ span {
+    color:green !important;
+  } 
+  
+  */
+
+
+
+
+.field-group {
+  display:flex;
+  flex-direction: row;
+  background-color: rgba(51, 51, 51, 1);
+  border-radius: 0.25rem;
+  align-items: center;
+}
+
+
+.field-group-slider {
+  background-color: rgba(51, 51, 51, 1);
+  border-radius: 0.25rem;
+}
+
+.slider-wrap {
+  position:relative;
+  padding: 0 1rem 0.125rem 1rem;
+  margin-top:-0.75rem;
+}
+
+
+.field-group div {
+  flex:1;
+  flex-grow: 1;
+  text-align:center;
+  justify-content: center;
+}
+
+
+
+
+
+/* radio button toggles */
+
+input[type=radio] {
+  display:none;
+}
+
+input[type=radio] + label {
+  position:static;
+  display:block;
+  height: 40px;
+  text-align:center;
+}
+
+input[type=radio]:checked + label {
+  background-color: rgb(3, 80, 95);
+}
+.toggle {
+  border-radius: 20px;
+}
+
+.toggle div label {
+  padding-top:8px;
+  border:solid 0.125rem rgb(4, 103, 122);
+  border-right:none;
+}
+
+.toggle div:first-child label   {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.toggle div:last-child label   {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-right:solid 0.125rem rgb(4, 103, 122);
+
+}
+
+
+
+
+
+
+
+
+
+
+.field-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
